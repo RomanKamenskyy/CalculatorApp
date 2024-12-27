@@ -19,9 +19,9 @@ jobs:
 
       # Шаг 2: Установка Xcode
       - name: Set up Xcode
-        uses: maxim-lobanov/setup-xcode@v2
+        uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '14' # Укажите вашу версию Xcode, если нужна конкретная
+          xcode-version: 'latest-stable' # Укажите вашу версию Xcode, если нужна конкретная
 
       # Шаг 3: Установка   зависимостей (если используете CocoaPods, SPM или Carthage)
      
