@@ -125,6 +125,8 @@ class CalculatorViewModel: ObservableObject {
             return String(format: "%.0f", value)
         } else {
             return String(value)
+            
+            
         }
     }
 }
