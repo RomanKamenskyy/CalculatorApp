@@ -50,6 +50,7 @@ struct ContentView: View {
                             ForEach(row, id: \.self) { button in
                                 CalculatorButton(button: button, action: {
                                     viewModel.receiveInput(button)
+                                    
                                 })
                             }
                         }
