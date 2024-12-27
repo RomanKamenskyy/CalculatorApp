@@ -1,0 +1,36 @@
+name: iOS Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: macos-latest
+
+    steps:
+      # Шаг 1: Проверка репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Шаг 2: Установка Xcode
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v2
+        with:
+          xcode-version: '14' # Укажите вашу версию Xcode, если нужна конкретная
+
+      # Шаг 3: Установка   зависимостей (если используете CocoaPods, SPM или Carthage)
+     
+
+      # Шаг 4: Сборка и тестирование
+      - name: Build and test
+        run: |
+          xcodebuild test \
+          -project CalculatorApp.xcodeproj \
+          -scheme CalculatorApp \
+          -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.2' \
+          ONLY_ACTIVE_ARCH=YES
