@@ -24,7 +24,8 @@ jobs:
           xcode-version: 'latest-stable' 
 
       # Шаг 3: Установка зависимостей (если используете CocoaPods, SPM или Carthage)
-     
+     - name: List available simulators
+       run: xcrun simctl list devices
 
       # Шаг 4: Сборка и тестирование
       - name: Build and test
