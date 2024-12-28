@@ -24,8 +24,6 @@ jobs:
           xcode-version: 'latest-stable' 
 
       # Шаг 3: Установка зависимостей (если используете CocoaPods, SPM или Carthage)
-     - name: List available simulators
-       run: xcrun simctl list devices
 
       # Шаг 4: Сборка и тестирование
       - name: Build and test
@@ -33,5 +31,5 @@ jobs:
           xcodebuild test \
           -project CalculatorApp.xcodeproj \
           -scheme CalculatorApp \
-          -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=18.2' \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=18.2' \
           ONLY_ACTIVE_ARCH=YES
