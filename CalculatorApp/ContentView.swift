@@ -45,6 +45,7 @@ struct ContentView: View {
 
                 
                 
+                
                 // Кнопки калькулятора
                 VStack(spacing: 10) {
                     ForEach(buttons, id: \.self) { row in
