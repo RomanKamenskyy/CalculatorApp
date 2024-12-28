@@ -43,6 +43,8 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding()
 
+                
+                
                 // Кнопки калькулятора
                 VStack(spacing: 10) {
                     ForEach(buttons, id: \.self) { row in
