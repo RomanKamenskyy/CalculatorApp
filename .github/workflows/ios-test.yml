@@ -25,13 +25,10 @@ jobs:
         with:
           xcode-version: '16.1'  # Убедитесь, что версия актуальна
 
-      - name: List available simulators
-        run: xcrun simctl list devices
-
       - name: Build and test
         run: |
           xcodebuild test \
             -project CalculatorApp.xcodeproj \
             -scheme CalculatorApp \
-            -destination 'platform=iOS Simulator,name=iPhone 14,OS=18.2' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
             ONLY_ACTIVE_ARCH=YES
