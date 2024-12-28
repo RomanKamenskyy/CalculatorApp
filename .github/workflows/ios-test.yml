@@ -25,10 +25,12 @@ jobs:
         with:
           xcode-version: '16.1'  # Убедитесь, что версия актуальна
 
-      - name: Build and test
+      - name: Run tests on iPhone 16 Pro
         run: |
           xcodebuild test \
             -project CalculatorApp.xcodeproj \
             -scheme CalculatorApp \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.2' \
+            -destination "platform=iOS Simulator,name=iPhone 16 Pro,OS=18.2" \
             ONLY_ACTIVE_ARCH=YES
+
+   
